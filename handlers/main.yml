@@ -1,6 +1,5 @@
 ---
-- name: Restart nginx
-  ansible.builtin.service:
+- name: Reload Nginx
+  service:
     name: nginx
-    state: restarted
-  when: not ansible_check_mode
+    state: reloaded
